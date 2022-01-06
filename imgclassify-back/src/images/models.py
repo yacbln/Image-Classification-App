@@ -8,3 +8,5 @@ class Image(models.Model):
 
     def __str__(self):
         return "Image classfied at {}".format(self.uploaded.strftime('%Y-%m-%d %H:%M'))
+    
+    def save(self, *args, **kwargs):
