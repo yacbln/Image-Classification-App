@@ -1,6 +1,10 @@
 # Image-Classification-App
 ## PREVIEW: 
 
+![alt text](https://github.com/yacineb97/Image-Classification-App/blob/main/pict%201.png?raw=true)
+
+![alt text](https://github.com/yacineb97/Image-Classification-App/blob/main/pict%202.png?raw=true)
+
 
 ## HOW TO SETUP AND RUN ON YOUR LOCAL MACHINE? 
 
@@ -24,18 +28,18 @@
    
    On Windows: 
    
-   `<your_env_name>\Scripts\activate`
+   `env\Scripts\activate`
    
    On MacOS:
    
    `source bin/activate`
    
    * Create superuser
-   `python manage.py createsuperuser'
+   `python src/manage.py createsuperuser'
 
    * Run Django server
    
-   `python manage.py runserver`
+   `python src/manage.py runserver`
    
    
   ### Note: Please install any modules, if missing, using  `pip install <module_name>`
