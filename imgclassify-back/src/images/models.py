@@ -5,7 +5,7 @@ from tensorflow.keras.applications.inception_resnet_v2 import InceptionResNetV2,
 
 # Create your models here.
 class Image(models.Model):
-    picture = models.ImageField()
+    picture = models.ImageField(upload_to='article_images')
     classified = models.CharField(max_length=200, blank=True)
     uploaded = models.DateTimeField(auto_now_add=True)
 
@@ -14,7 +14,7 @@ class Image(models.Model):
 
     def save(self, *args, **kwargs):
         try:
-            img = load_img(self.picture, target_size=(299,299))
+            img = load_img(self.picture.path, target_size=(299,299))
             img_arry = img_to_array(img)
             to_pred = np.expand_dims(img_arry, axis=0) #(1, 299, 299, 3)
             prep = preprocess_input(to_pred)
